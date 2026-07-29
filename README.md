@@ -5,7 +5,7 @@
 </p>
 
 <div style="text-align: center;">
-  <img src="https://github.com/kolithawarnakulasooriya/SwarmX/logo.png" alt="Description">
+  <img src="https://github.com/kolithawarnakulasooriya/SwarmX/blob/develop/logo.png" alt="Description">
 </div>
 
 SwarmX is an open-source Java framework for swarm intelligence, optimization, and multi-agent simulation. It brings together a collection of swarm-based optimization algorithms, benchmark functions, visualization tools, and example programs in a single, extensible codebase.
