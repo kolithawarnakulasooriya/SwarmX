@@ -1,10 +1,6 @@
 # SwarmX
 
-<p align="center">
-    ![Logo](logo.png)
-</p>
-
-<div style="text-align: center;">
+<div align="center">
   <img src="https://github.com/kolithawarnakulasooriya/SwarmX/blob/develop/logo.png" alt="Description">
 </div>
 
