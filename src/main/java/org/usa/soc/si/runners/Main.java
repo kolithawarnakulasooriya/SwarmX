@@ -14,8 +14,7 @@ import javax.swing.*;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.List;
@@ -404,13 +403,51 @@ public class Main {
             }
         }
 
-        RowPanel iterationPanel = new RowPanel(" Iterations", "100");
+        RowPanel iterationPanel = new RowPanel(" Iterations (100)", "100");
         iterationCount = 100;
-        iterationPanel.txt.addCaretListener(new CaretListener() {
+        iterationPanel.txt.setEditable(false);
+        iterationPanel.txt.addMouseListener(new MouseListener() {
             @Override
-            public void caretUpdate(CaretEvent e) {
-                if(!iterationPanel.txt.getText().isEmpty()){
+            public void mouseClicked(MouseEvent e) {
+                iterationPanel.txt.setEditable(true);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+        iterationPanel.txt.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (e.getKeyCode() == 10) {
                     iterationCount = Integer.parseInt(iterationPanel.txt.getText());
+                    iterationPanel.txt.setEditable(false);
                 }
             }
         });
@@ -418,23 +455,100 @@ public class Main {
 
         RowPanel pnlAgentsCount = new RowPanel(" Agents Count", "100");
         agentsCount = 100;
-        pnlAgentsCount.txt.addCaretListener(new CaretListener() {
+        pnlAgentsCount.txt.setEditable(false);
+
+        pnlAgentsCount.txt.addMouseListener(new MouseListener() {
             @Override
-            public void caretUpdate(CaretEvent e) {
-                if(!pnlAgentsCount.txt.getText().isEmpty()){
+            public void mouseClicked(MouseEvent e) {
+                pnlAgentsCount.txt.setEditable(true);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+        pnlAgentsCount.txt.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (e.getKeyCode() == 10) {
                     agentsCount = Integer.parseInt(pnlAgentsCount.txt.getText());
+                    pnlAgentsCount.txt.setEditable(false);
                 }
             }
         });
         pnlTop.add(pnlAgentsCount);
 
-        RowPanel pnlNumberOfDimentions = new RowPanel(" Dimentions", "2");
+        RowPanel pnlNumberOfDimentions = new RowPanel(" Dimensions", "2");
+        pnlNumberOfDimentions.txt.setEditable(false);
         nd = 2;
-        pnlNumberOfDimentions.txt.addCaretListener(new CaretListener() {
+        pnlNumberOfDimentions.txt.addMouseListener(new MouseListener() {
             @Override
-            public void caretUpdate(CaretEvent e) {
-                if(!pnlNumberOfDimentions.txt.getText().isEmpty()){
+            public void mouseClicked(MouseEvent e) {
+                pnlNumberOfDimentions.txt.setEditable(true);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+        pnlNumberOfDimentions.txt.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (e.getKeyCode() == 10) {
                     nd = Integer.parseInt(pnlNumberOfDimentions.txt.getText());
+                    pnlNumberOfDimentions.txt.setEditable(false);
                 }
             }
         });

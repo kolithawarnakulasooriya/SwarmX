@@ -100,7 +100,7 @@ public class FunctionChartPlotter extends JFrame {
             best_coords[0][x/2] = a.getFunction().getExpectedParameters()[x];
             best_coords[1][x/2] = a.getFunction().getExpectedParameters()[x+1];
 
-            System.out.println(best_coords[0][x/2] +" : "+ best_coords[1][x/2]);
+            //System.out.println(best_coords[0][x/2] +" : "+ best_coords[1][x/2]);
         }
         XYSeries series1 = this.chart.addSeries("Best", best_coords[0], best_coords[1]);
         series1.setMarker(SeriesMarkers.DIAMOND);
@@ -165,9 +165,9 @@ public class FunctionChartPlotter extends JFrame {
             }
         }
         setExecute(false);
-        System.out.println("");
-        System.out.println("Actual: "+ siAlgorithm.getBestDoubleValue() +" , Expected: "+ siAlgorithm.getFunction().getExpectedBestValue());
-        System.out.println("Actual: "+ siAlgorithm.getGBest().toString()+" , Expected: "+ Arrays.toString(siAlgorithm.getFunction().getExpectedParameters()));
+        //System.out.println("");
+        //System.out.println("Actual: "+ siAlgorithm.getBestDoubleValue() +" , Expected: "+ siAlgorithm.getFunction().getExpectedBestValue());
+        //System.out.println("Actual: "+ siAlgorithm.getGBest().toString()+" , Expected: "+ Arrays.toString(siAlgorithm.getFunction().getExpectedParameters()));
     }
 
     public void setTime(int time) {
